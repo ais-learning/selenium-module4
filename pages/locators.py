@@ -28,5 +28,4 @@ class ProductPageLocators(object):
 
 class CartPageLocators(object):
     EMPTY_BASKET_MSG = (By.CSS_SELECTOR, "#content_inner p")
-    # TOTAL_PRICE = (By.CSS_SELECTOR, ".total .price_color")
     BASKET_FORMSET = (By.CSS_SELECTOR, "#basket_formset")

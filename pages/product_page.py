@@ -28,15 +28,11 @@ class ProductPage(BasePage):
         success_msg_el = self.browser.find_element(*ProductPageLocators.SUCCESS_MSG)
         success_msg = success_msg_el.text
         success_msg_example = product_name + " has been added to your basket."
-        # print ("message = ", success_msg)
-        # print ("message should be ", success_msg_example)
         assert success_msg == success_msg_example, "Product name should be in success message"
 
     def product_price_should_equal_basket_price(self, product_price):
         basket_el = self.browser.find_element(*ProductPageLocators.BASKET_PRICE)
         basket = basket_el.text
-        # print ("basket = ", basket)
-        # print ("product_price = ", product_price)
         assert product_price == basket, "Product price should be equal to basket price"
 
     def solve_quiz_and_get_code(self):
